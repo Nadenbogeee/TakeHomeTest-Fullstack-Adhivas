@@ -1,4 +1,3 @@
-// src/routes/courseRoutes.js
 import express from "express";
 import courseController from "../controllers/courseController.js";
 import auth from "../middleware/auth.js";
