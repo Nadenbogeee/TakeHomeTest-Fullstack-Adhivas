@@ -1,8 +1,6 @@
-// src/controllers/courseController.js
 import Course from "../models/Course.js";
 
 const courseController = {
-  // Create new course
   createCourse: async (req, res) => {
     try {
       const { title, description, lecturer_name, credits, semester, department } = req.body;
