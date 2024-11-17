@@ -1,4 +1,3 @@
-// src/controllers/authController.js
 import jwt from "jsonwebtoken";
 import User from "../models/User.js";
 import path from "path";
@@ -122,9 +121,6 @@ const login = async (req, res) => {
 // --- login end
 
 // --- upload image
-
-// src/controllers/authController.js
-
 const updateProfilePicture = async (req, res) => {
   try {
     if (!req.file) {
@@ -170,7 +166,6 @@ const updateProfilePicture = async (req, res) => {
 };
 
 // --- upload image
-
 const uupdateProfilePicture = async (req, res) => {
   try {
     if (!req.file) {
@@ -245,7 +240,6 @@ const deleteProfilePicture = async (req, res) => {
 
 const getProfile = async (req, res) => {
   try {
-    // req.user sudah diset oleh middleware auth
     res.json({
       user: {
         id: req.user.id,
