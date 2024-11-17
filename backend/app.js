@@ -1,4 +1,3 @@
-// src/index.js (update)
 import express from "express";
 import cors from "cors";
 import authRoutes from "./src/routes/authRoutes.js";
@@ -24,7 +23,7 @@ app.use("/api/courses", courseRoutes);
 const PORT = process.env.PORT || 3000;
 
 sequelize
-  .sync({ force: false }) // Set force: true untuk reset database (development only)
+  .sync({ force: false }) 
   .then(() => {
     console.log("Database synced");
     app.listen(PORT, () => {
@@ -35,5 +34,4 @@ sequelize
     console.error("Error syncing database:", err);
   });
 
-// Serve static files from uploads directory
 app.use("/uploads", express.static(path.join(__dirname, "./uploads")));
