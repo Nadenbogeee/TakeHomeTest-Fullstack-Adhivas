@@ -1,4 +1,3 @@
-// src/routes/authRoutes.js
 import express from "express";
 import authController from "../controllers/authController.js";
 import auth from "../middleware/auth.js";
@@ -17,6 +16,5 @@ router.get("/profile", auth, authController.getProfile);
 router.put("/profile-picture", auth, upload.single("profilePicture"), authController.uupdateProfilePicture);
 router.delete("/profile-picture", auth, authController.deleteProfilePicture);
 
-// router.post("/upload-profile-picture", auth, upload.single("profilePicture"), authController.updateProfilePicture);
 
 export default router;
