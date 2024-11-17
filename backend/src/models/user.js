@@ -1,4 +1,3 @@
-// src/models/User.js
 import { DataTypes } from "sequelize";
 import bcrypt from "bcryptjs";
 import sequelize from "../config/database.js";
@@ -26,7 +25,7 @@ const User = sequelize.define(
     },
   },
   {
-    timestamps: true, // Ini akan membuat kolom createdAt dan updatedAt
+    timestamps: true,
     hooks: {
       beforeCreate: async (user) => {
         if (user.password) {
