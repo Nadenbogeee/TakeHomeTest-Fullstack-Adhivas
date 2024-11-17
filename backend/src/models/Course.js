@@ -1,4 +1,3 @@
-// src/models/Course.js
 import { DataTypes } from "sequelize";
 import sequelize from "../config/database.js";
 
